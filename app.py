@@ -39,8 +39,9 @@ if user_q:
     4. If the context does not contain the answer → reply with:
     "I could not find this information in the IVP Global Travel Policy."
     5. Do not invent or add extra information outside the context.
-
-    Context:
+    IMPORTANT: Only say "I could not find this information" if the context truly does not contain relevant information. 
+    Otherwise, always attempt an answer using the context, even if the question is phrased differently.
+    Here is the CONTEXT:
     {context}
 
     Question: {user_q}

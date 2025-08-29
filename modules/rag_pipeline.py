@@ -22,7 +22,7 @@ def build_vector_db(pdf_path: str, db_path: str = "vectorstore") -> FAISS:
     docs = loader.load()
 
     # Chunk text
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     splits = text_splitter.split_documents(docs)
 
     # Embeddings
@@ -35,7 +35,7 @@ def build_vector_db(pdf_path: str, db_path: str = "vectorstore") -> FAISS:
     return db
 
 
-def retrieve_docs(query: str, db: FAISS, k: int = 3):
+def retrieve_docs(query: str, db: FAISS, k: int = 5):
     """
     Retrieves top-k relevant documents for a query.
     """

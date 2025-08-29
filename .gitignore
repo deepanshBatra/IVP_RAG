@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pkl
+
+# Environment
+.env
+*.env
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+
+# Streamlit
+.streamlit/
+
+# FAISS / vector DB
+vectorstore/
+*.faiss
+*.pkl
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db
